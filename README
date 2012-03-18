@@ -1,0 +1,5 @@
+Truc a faire:
+
+Dans le main rajouter :
+srand(time(NULL)); // initialisation de rand
+
