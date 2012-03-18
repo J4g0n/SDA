@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "univers.h"
 
 univ initUniv() {
@@ -16,7 +17,7 @@ univ elmtDroite(univ elmt) {
 	}
 	return elmt->droite;
 }
-	
+
 univ elmtGauche(univ elmt) {
 	if (elmt->gauche==NULL) {
 		elmt->gauche=initUniv();
