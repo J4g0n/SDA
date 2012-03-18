@@ -1,24 +1,40 @@
 #ifndef __objet_h_
 #define __objet_h_
-
+#include <stdlib.h>
+#include <stdio.h>
+#include "global.h"
 //coffre
 enum tresor {
-	OR;
-	BONUS;
+	OR,
+	BONUS,
+};
+
+enum bonus {
+    BONUS1,
+    BONUS2,
+    BONUS3,
 };
 
 typedef struct {
 	bool ouvert;
 	enum tresor t;
-	union {
+	union contenu {
 		int po;
-		bonus B;
-} coffre;
+		enum bonus B;
+    };
+}coffre;
 //fin coffre
 
 
 //debut hero
 typedef struct {
+
+} *inventaire, str_inventaire;
+
+typedef struct {
+    int HP;
+    char * nom;
+    inventaire InvHero;
 } *hero, strHero;
 //fin hero
 
@@ -31,14 +47,15 @@ typedef struct {
 
 //debut zone
 enum terrain {
-	mur;
-	sol;
+	mur,
+	sol,
 };
 
 enum objet {
-	HERO;
-	MONSTRE;
-	COFFRE;
+	HERO,
+	MONSTRE,
+	COFFRE,
+	NEUTRE,         // Sinon toute les cases sont forcement soit des monstres soit des heros soit des coffres
 };
 
 typedef struct {
@@ -48,8 +65,10 @@ typedef struct {
 		hero H;
 		monstre mobs;
 		coffre C;
+
 	} u;
 } *zone, strZone;
 //fin zone
 
 
+#endif
