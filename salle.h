@@ -15,6 +15,30 @@ typedef struct salle {
 	int taille;      // vu que c'est creer aleatoirement mieux vos stocker la taille de la salle dans la str
 } *salle, strSalle;
 
+//debut zone
+enum terrain {
+	mur,
+	sol,
+};
+
+enum objet {
+	HERO,
+	MONSTRE,
+	COFFRE,
+	NEUTRE,         // Sinon toutes les cases sont forcement soit des monstres soit des heros soit des coffres
+};
+
+typedef struct {
+	enum terrain ter;
+	enum objet obj;
+	union {
+		hero H;
+		monstre mobs;
+		coffre C;
+	} u;
+} *zone, strZone;
+//fin zone
+
 salle creerSalle();
 
 #endif

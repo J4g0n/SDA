@@ -3,3 +3,12 @@ Truc a faire:
 Dans le main rajouter :
 srand(time(NULL)); // initialisation de rand
 
+FAIT:
+Implémentation du système de combat:
+	-ajout de deux fichiers combat.h combat.c
+	-modification du makefile
+	-création du type inventaire
+	-création d'un type paquet dans combat.h
+Descritpion:
+le mode de combat utilise des listes chainées circulaires afin de créer deux paquets un pour le monstre et un pour le héro.
+les cartes confrontés une a une jusqu'a ce qu'une des deux listes soit vide.
