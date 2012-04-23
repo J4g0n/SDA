@@ -47,10 +47,10 @@ paquet rotationPaquet(paquet P) {
 
 
 paquet paquetGen(inventaire inv) {
-	int i;
+	int i,j;
 	paquet P=paquetVide();
-	for(i=0;i<inv->occupe;i++) {
-		P=ajouterCarte(P,inv->card[i]);
+	for(i=20;i<TAILLE_INVENTAIRE;i++) {
+		for(j=inv->it[i].qte;j>0;j++) P=ajouterCarte(P,inv->it[i].tp.card);
 	}
 	return P;
 }
