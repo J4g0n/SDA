@@ -1,0 +1,27 @@
+Specifications:
+
+a./combat(liste chainee circulaire)
+
+operations:
+	paquetVide: _->paquet
+	ajouterCarte: paquet, carte->paquet
+	supprimerCarte: paquet->paquet
+	sommetPaquet: paquet->carte
+	testVide: paquet->Bool
+	rotationPaquet: paquet->paquet
+
+pre-conditions: paquet P, carte C
+	pre(supprimer(P))=(testVide(P)==faux)
+	pre(sommetPaquet(P))=(testVide(P)==faux)
+	
+axiomes:
+	testVide(paquetVide())=vrai
+	testVide(ajouterCarte(P,C))=faux
+	supprimerCarte(ajouter(P,C))=P
+	sommetPaquet(ajouterCarte(P,C))=sommetPaquet(P) si (testVide(P)!=0)
+																	C sinon
+	rotationPaquet(paquetVide())=paquetVide()
+	rotationPaquet(ajouterCarte(P,C))=
+
+b./inventaire
+

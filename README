@@ -1,7 +1,26 @@
 Truc a faire:
 
-Dans le main rajouter :
-srand(time(NULL)); // initialisation de rand
+-Faire un tableau de monstre(en creer une dizaine), en creant les monstre aleatoirement.
+	A appele au debut du main.
+
+-Faire une fonction qui creer des inventaires aleatoirement pour les monstres.
+-Creer a la main la salle 1 et 8.                             X
+
+-Creer des contenu de coffres aleatoirement, affichage de l'evenement coffre.
+	Fonction a mettre dans salle.c, et modifier creerSalle.
+
+-Fonction OuvrirCoffre a finir.
+	Dans salle.c .
+
+-Creation de mur aleatoire,(il faut juste empecher que les mur soit collee au bord de la
+salle).                                                                                     X
+	Dans salle.c .
+
+-Fonction Game Over.        X
+	Dans global.c .
+
+Encore ca et le projet est fini, il faut encore commenter les .h uniquement avec les
+commentaire doxygen. 
 
 FAIT:
 Implémentation du système de combat:

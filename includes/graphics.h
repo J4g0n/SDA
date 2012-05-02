@@ -2,7 +2,8 @@
  *	\file	graphisme.h
  *	\brief	D�claration des m�thodes d'affichage et de gestion de clavier.
  */
-
+#ifndef _graphics_h
+#define _graphics_h
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -391,4 +392,4 @@ enum ToucheClavier
 	/** Touche inconnue. */
 	TOUCHE_INCONNUE
 };
-
+#endif

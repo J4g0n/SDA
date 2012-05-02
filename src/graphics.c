@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <termios.h>
 #include <unistd.h>
-#include "graphisme.h"
+#include "graphics.h"
 
 
 /**
